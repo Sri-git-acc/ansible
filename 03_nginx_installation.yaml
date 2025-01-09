@@ -1,0 +1,13 @@
+- name: nginx installation
+  hosts: remo
+  become: yes
+  tasks: 
+    - name: Installation of nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: Starting nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
