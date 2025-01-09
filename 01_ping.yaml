@@ -1,5 +1,5 @@
-- name: PING
+- name: Ping
   hosts: remo
-  tasks: # task=module=collection
-  - name: ping the server
+  tasks: 
+  - name: Ping the server
     ansible.builtin.ping:
