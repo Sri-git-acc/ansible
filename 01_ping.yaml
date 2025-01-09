@@ -1,5 +1,5 @@
 -name: Ping
  hosts: remote
  tasks: 
-  -name: Ping the server
-   ansible.builtin.ping:
+ -name: Ping the server
+  ansible.builtin.ping:
