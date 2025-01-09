@@ -1,5 +1,5 @@
 - name: Hello World
-  hosts: web
+  hosts: remo
   tasks:
     - name: Say Hello World
       ansible.builtin.debug:
