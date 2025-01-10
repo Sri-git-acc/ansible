@@ -1,0 +1,7 @@
+- name: Variables
+  hosts: remo
+  connection: local
+  tasks:
+  - name: task variables test
+    ansible.builtin.debug:
+    msg: "Hello"
