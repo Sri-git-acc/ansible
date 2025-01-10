@@ -15,10 +15,10 @@
 - name: Play2
   hosts: remo
   tasks: 
-  vars:
-    TOPIC: AWS
-    PLAY_NUMBER: 06
   - name: task1
+    vars:
+      TOPIC: AWS
+      PLAY_NUMBER: 06
     ansible.builtin.debug:
       msg: "{{TOPIC}}, {{PLAY_NUMBER}}"
   - name: task2
