@@ -4,4 +4,4 @@
   tasks:
   - name: task variables test
     ansible.builtin.debug:
-    msg: "Hello"
+      msg: "Hello"
