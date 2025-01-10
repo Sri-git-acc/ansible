@@ -16,7 +16,6 @@
   hosts: remo
   tasks: 
   vars:
-  vars:
     TOPIC: AWS
     PLAY_NUMBER: 06
   - name: task1
