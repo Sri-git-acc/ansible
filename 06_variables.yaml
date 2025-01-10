@@ -1,0 +1,23 @@
+- name: Play1
+  hosts: remo
+  connection: local
+  vars:
+    TOPIC: Ansible
+    PLAY_NUMBER: 06
+  tasks: 
+  - name: task1
+    ansible.builtin.debug:
+      msg: "Hello we are performing {{TOPIC}} handson and our play number is {{PLAY_NUMBER}}"
+  - name: task2
+    ansible.builtin.debug:
+      msg: "Message from Play1 task2"
+
+- name: Play2
+  hosts: remo
+  tasks: 
+  - name: task1
+    ansible.builtin.debug:
+      msg: "Message from Play2 task1"
+  - name: task2
+    ansible.builtin.debug:
+      msg: "Message from Play2 task2"
