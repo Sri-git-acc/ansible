@@ -1,11 +1,24 @@
 - name: Play 06
   hosts: remo
-  vars_files:
-  - vars.yaml
-  tasks: 
-  - name: task 1
-    ansible.builtin.debug:
-      msg: Hello This is {{TOPIC}} Playbook and the number is {{PLAY_NUMBER}}
+  vars_prompts:
+  - name: TOPIC
+    prompt: Please enter your topic name:
+  - name: PLAY_NUMBER
+    prompt: Please enter your play number:
+  tasks:
+  ansible.builtin.debug:
+    msg: Hello this is {{TOPIC}} playbook and the playbook number is {{PLAY_NUMBER}}
+
+
+
+# - name: Play 06
+#   hosts: remo
+#   vars_files:
+#   - vars.yaml
+#   tasks: 
+#   - name: task 1
+#     ansible.builtin.debug:
+#       msg: Hello This is {{TOPIC}} Playbook and the number is {{PLAY_NUMBER}}
 
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
