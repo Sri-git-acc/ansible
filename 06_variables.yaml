@@ -3,8 +3,10 @@
   vars_prompt:
   - name: TOPIC
     prompt: "Please enter your topic name:"
+    private: false
   - name: PLAY_NUMBER
     prompt: "Please enter your play number:"
+    private: false
   tasks:
   - name: task 1
     ansible.builtin.debug:
