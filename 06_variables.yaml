@@ -2,9 +2,9 @@
   hosts: remo
   vars_prompts:
   - name: TOPIC
-    prompt: "Please enter your topic name:""
+    prompt: "Please enter your topic name:"
   - name: PLAY_NUMBER
-    prompt: "Please enter your play number:""
+    prompt: "Please enter your play number:"
   tasks:
   ansible.builtin.debug:
     msg: Hello this is {{TOPIC}} playbook and the playbook number is {{PLAY_NUMBER}}
