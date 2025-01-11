@@ -1,26 +1,39 @@
-- name: Play1
+- name: Play 06
   hosts: remo
-  connection: local
-  vars:
-    TOPIC: Ansible
-    PLAY_NUMBER: 06
+  vars_files:
+  - vars.yaml
   tasks: 
-  - name: task1
+  - name: task 1
     ansible.builtin.debug:
-      msg: "Hello we are performing {{TOPIC}} handson and our play number is {{PLAY_NUMBER}}"
-  - name: task2
-    ansible.builtin.debug:
-      msg: "Message from Play1 task2"
+    msg: Hello This is a {{TOPIC}} Playbook and the number is {{PLAY_NUMBER}}
 
-- name: Play2
-  hosts: remo
-  tasks: 
-  - name: task1
-    vars:
-      TOPIC: AWS
-      PLAY_NUMBER: 06
-    ansible.builtin.debug:
-      msg: "{{TOPIC}}, {{PLAY_NUMBER}}"
-  - name: task2
-    ansible.builtin.debug:
-      msg: "Message from Play2 task2"
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+# - name: Play1
+#   hosts: remo
+#   connection: local
+#   vars:
+#     TOPIC: Ansible
+#     PLAY_NUMBER: 06
+#   tasks: 
+#   - name: task1
+#     ansible.builtin.debug:
+#       msg: "Hello we are performing {{TOPIC}} handson and our play number is {{PLAY_NUMBER}}"
+#   - name: task2
+#     ansible.builtin.debug:
+#       msg: "Message from Play1 task2"
+
+# - name: Play2
+#   hosts: remo
+#   tasks: 
+#   - name: task1
+#     vars:
+#       TOPIC: AWS
+#       PLAY_NUMBER: 06
+#     ansible.builtin.debug:
+#       msg: "{{TOPIC}}, {{PLAY_NUMBER}}"
+#   - name: task2
+#     ansible.builtin.debug:
+#       msg: "Message from Play2 task2"
