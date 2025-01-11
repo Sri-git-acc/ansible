@@ -1,6 +1,6 @@
 - name: Play 06
   hosts: remo
-  vars_prompts:
+  vars_prompt:
   - name: TOPIC
     prompt: "Please enter your topic name:"
   - name: PLAY_NUMBER
