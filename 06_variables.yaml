@@ -5,7 +5,7 @@
   tasks: 
   - name: task 1
     ansible.builtin.debug:
-    msg: Hello This is a {{TOPIC}} Playbook and the number is {{PLAY_NUMBER}}
+    msg: "Hello This is a {{TOPIC}} Playbook and the number is {{PLAY_NUMBER}}"
 
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
