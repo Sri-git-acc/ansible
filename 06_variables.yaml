@@ -6,8 +6,9 @@
   - name: PLAY_NUMBER
     prompt: "Please enter your play number:"
   tasks:
-  ansible.builtin.debug:
-    msg: Hello this is {{TOPIC}} playbook and the playbook number is {{PLAY_NUMBER}}
+    - name: task 1
+    ansible.builtin.debug:
+      msg: Hello this is {{TOPIC}} playbook and the playbook number is {{PLAY_NUMBER}}
 
 
 
