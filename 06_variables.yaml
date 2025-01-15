@@ -1,12 +1,25 @@
-- name: Play 06
-  hosts: remo
-  tasks:
-  - name: task 1
-    ansible.builtin.debug:
-      msg: Hello this is {{TOPIC}} playbook and the playbook number is {{PLAY_NUMBER}}
+Ansible Variable hirrarchy list
+1. Command line
+2. Task
+3. Files
+4. Prompt
+5. Play
+6. Inventory 
+7. Roles
+
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# - name: Play 06
+#   hosts: remo
+#   tasks:
+#   - name: task 1
+#     ansible.builtin.debug:
+#       msg: Hello this is {{TOPIC}} playbook and the playbook number is {{PLAY_NUMBER}}
+  #  NOTE: If there are no variables declared in the script/files/inventory/as prompt, but calling variables in script.
+  # Then we can pass the variables from command line like follow "-e TOPIC=Ansible -e PLAY_NUMBER=06" while calling the script.
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-# - name: Play 06
+# - name: Play 06         #Passing variables through prompts
 #   hosts: remo
 #   vars_prompt:
 #   - name: TOPIC
@@ -20,7 +33,7 @@
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# - name: Play 06
+# - name: Play 06         #Passing variables through vars.yaml file
 #   hosts: remo
 #   vars_files:
 #   - vars.yaml
@@ -33,9 +46,9 @@
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-# - name: Play1
+# - name: Play1 # Passing variables through play level and task level variables
 #   hosts: remo
-#   connection: local
+  # connection: local # No need to give credentials for local connection
 #   vars:
 #     TOPIC: Ansible
 #     PLAY_NUMBER: 06

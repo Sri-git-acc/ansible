@@ -1,0 +1,16 @@
+- name: Play 07
+  hosts: remo
+  vars:
+    course: Ansible
+    duration: 120
+    topics:
+    - AWS
+    - Ansible
+    - Terraform
+    live: True
+    covering: 
+      ci: Jenkins
+    tasks: 
+    - name: testing data types
+    ansible.builtin.debug:
+      msg: " Hello, I'm learning {{course}} of {{duration}}hours duration. Topics that are covering are {{topics}} and the live is {{live}}. and the coviring topic is {{covering}}"
