@@ -1,0 +1,14 @@
+- name: contions
+  hosts: remo
+  vars:
+    number: 15
+  tasks:
+  - name: testing conditions greater than 10
+    ansible.builtin.debug:
+      msg: "The number {{number}} is greater than 10"
+    when: number > 10
+  
+  - name: testing conditions lessthan or equal to 10
+    ansible.builtin.debug:
+      msg: "The number {{number}} is lessthan or equal to 10"
+    when: number <= 10
