@@ -5,3 +5,8 @@
   - name: undefined variable
     ansible.builtin.debug:
       msg: "Hello {{ person | default('Sri') }}"
+
+  - name: string to list
+    courses: AWS, Ansible, Terraform
+    ansible.builtin.debug:
+      msg: "Courses are:{{courses}} | split(',')"
