@@ -8,3 +8,10 @@
   - name: printing shell result
     ansible.builtin.debug:
       msg: "Result is: {{shell_result}}"
+
+  - name: command testing
+    ansible.builtin.command: ls -ltr > /tmp/test1.txt
+    register: command_result
+  - name: printing command result
+    ansible.builtin.debug:
+      msg: "Result is: {{command_result}}"
