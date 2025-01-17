@@ -36,7 +36,7 @@
       dest: /app
       remote_src: yes
   
-  - name: Install dependencies
+  - name: Installing libraries
     community.general.npm:
       path: /app
 
@@ -45,6 +45,12 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
   
+  - name: Install dependencies
+    ansible.builtin.pip:
+      name: PyMySQL
+      state: present
+      executable: pip3.9
+
   - name: import mysql data
     community.mysql.mysql_db:
       state: import 
