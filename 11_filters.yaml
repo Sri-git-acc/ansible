@@ -1,4 +1,4 @@
-- name: Filters
+- name: filters
   hosts: remo
   connection: local
   tasks:
