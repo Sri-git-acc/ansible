@@ -18,4 +18,4 @@
       - Ansible
       - Terraform
     ansible.builtin.debug:
-      msg: "Courses are:{{courses | join(',')}}"
+      msg: "Courses are:{{courses | join(', ')}}"
