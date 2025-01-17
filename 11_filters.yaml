@@ -4,7 +4,7 @@
   connection: local
   tasks:
   - name: install netaddr
-    ansible.builtin.package:
+    ansible.builtin.pip:
       name: netaddr
       state: installed
 
