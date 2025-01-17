@@ -64,4 +64,4 @@
     vars: 
       ip: "45.23.12.43"
     ansible.builtin.debug:
-      msg: "ip address {{ip | ansible.util.ipaddr}}"
+      msg: "ip address {{ip | ansible.utils.ipaddr}}"
