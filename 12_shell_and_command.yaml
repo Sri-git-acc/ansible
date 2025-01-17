@@ -14,4 +14,4 @@
     register: command_result
   - name: printing command result
     ansible.builtin.debug:
-      msg: "Result is: {{command_result | split('\n')}}"
+      msg: "Result is: {{command_result | split('        ')}}"
