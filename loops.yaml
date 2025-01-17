@@ -1,0 +1,10 @@
+- name: Loops
+  hosts: remo
+  tasks:
+  - name: task1
+    ansible.builtin.debug:
+      msg: "{{item}}"
+    loop:
+    - Ansible
+    - AWS
+    - Terraform
