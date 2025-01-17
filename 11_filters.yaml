@@ -47,3 +47,9 @@
       numbers: [34,54,65,7,23,41]
     ansible.builtin.debug:
       msg: "Min number is: {{numbers | max}}"
+
+  - name: convert to upper
+    vars:
+      Name: Steve jobs
+    ansible.builtin.debug:
+      msg: "Min number is: {{Name | upper}}"
