@@ -10,8 +10,11 @@
 
   - name: install nodejs
     ansible.builtin.package:
-      name: nodejs
+      name: {{item}}
       state: present
+    loop:
+    - nodejs
+    - mysql
   
   - name: add expense user
     ansible.builtin.user:
@@ -32,3 +35,14 @@
       src: /tmp/backend.zip
       dest: /app
       remote_src: yes
+  
+  - name: Install dependencies
+    community.general.npm:
+      path: /app
+
+  - name: copu backend.service
+    ansible.builtin.copy:
+      src: backend.service
+      dest: /etc/systemd/system/backend.service
+
+  
