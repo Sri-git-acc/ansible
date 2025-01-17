@@ -1,5 +1,6 @@
 - name: Shell and command module testing
   hosts: remo
+  connection: local
   tasks:
   - name: Shell testing
     ansible.builtin.shell: ls -ltr > /tmp
