@@ -1,5 +1,6 @@
 - name: Filters
   hosts: remo
+  connection: local
   tasks:
   - name: undefined variable
     ansible.builtin.debug:
