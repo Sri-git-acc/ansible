@@ -70,6 +70,3 @@
     vars: 
       ip: "45.23.12.43"
     ansible.builtin.debug: ip | ansible.utils.ipaddr
-    register: vali
-      msg: "ip address is valid"
-    when: vali is true
