@@ -5,7 +5,7 @@
   - name: disable nodejs
     ansible.builtin.command: dnf module disable nodejs -y
   
-    - name: enable nodejs
+  - name: enable nodejs
     ansible.builtin.command: dnf module enable nodejs -y
 
   - name: install nodejs
