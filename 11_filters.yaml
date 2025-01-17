@@ -11,3 +11,11 @@
       courses: "AWS, Ansible, Terraform"
     ansible.builtin.debug:
       msg: "Courses are:{{courses | split(',')}}"
+  - name: list to string
+    vars:
+      courses: 
+      - AWS
+      - Ansible
+      - Terraform
+    ansible.builtin.debug:
+      msg: "Courses are:{{courses}}"
