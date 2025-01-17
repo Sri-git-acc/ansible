@@ -1,11 +1,26 @@
-- name: Python and zip installation
+- name: Changes to installations
   hosts: remo
   become: yes
-  tasks: 
-  - name: task1
+  tasks:
+  - name: changing package states
     ansible.builtin.package:
-      name: "{{item}}"
-      state: installed
+    name: "{{item.name}}"
+    state: "{{item.state}}"
     loop:
-    - python
-    - zip
+    - {name: "python", state: absent}
+    - {name: "zip", state: "present"}
+    - {name: "mysql", state: "installed"}
+
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# - name: Python and zip installation
+#   hosts: remo
+#   become: yes
+#   tasks: 
+#   - name: task1
+#     ansible.builtin.package:
+#       name: "{{item}}"
+#       state: installed
+#     loop:
+#     - python
+#     - zip
