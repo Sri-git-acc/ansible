@@ -38,6 +38,6 @@
 
   - name: minimum number
     vars:
-      numbers: [1,2,5,34,54,65,7,23,41]
+      numbers: [34,54,65,7,23,41]
     ansible.builtin.debug:
       msg: "Min number is: {{numbers | min}}"
