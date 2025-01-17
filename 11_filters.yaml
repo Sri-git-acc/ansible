@@ -1,0 +1,6 @@
+- name: Filters
+  hosts: remo
+  tasks:
+  - name: undefined variable
+    ansible.builtin.debug:
+      msg:" Hello {{ person | default(Sri) }}"
