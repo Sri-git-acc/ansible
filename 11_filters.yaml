@@ -27,3 +27,11 @@
         Cloud: 'AWS'
     ansible.builtin.debug:
       msg: "Courses are:{{courses | dict2items}}"
+  - name: list to map
+    vars:
+      courses:
+        { 'key': 'ci', 'value': 'jenkins' }
+        { 'key': 'IaC', 'value': 'Ansible' }
+        { 'key': 'Cloud', 'value': 'AWS' }
+    ansible.builtin.debug:
+      msg: "Courses are {{courses | items2dict}}"
