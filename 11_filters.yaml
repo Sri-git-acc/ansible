@@ -6,7 +6,7 @@
   - name: install netaddr
     ansible.builtin.pip:
       name: netaddr
-      state: installed
+      state: present
 
   - name: undefined variable
     ansible.builtin.debug:
