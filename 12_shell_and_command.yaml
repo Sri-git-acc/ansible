@@ -3,4 +3,4 @@
   connection: local
   tasks:
   - name: Shell testing
-    ansible.builtin.shell: ls -ltr > /tmp
+    ansible.builtin.shell: ls -ltr > /tmp/test1.txt
