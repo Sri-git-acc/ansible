@@ -1,7 +1,7 @@
-- name: filters
+- name: Play1
   hosts: remo
   connection: local
   tasks:
   - name: undefined variable
     ansible.builtin.debug:
-      msg:"Hello {{ person | default(Sri) }}"
+      msg:"Hello"
