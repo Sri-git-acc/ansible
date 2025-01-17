@@ -7,9 +7,9 @@
       name: "{{item.name}}"
       state: "{{item.state}}"
     loop:
-    - {name: "python", state: absent}
+    - {name: "python", state: installed}
     - {name: "zip", state: "present"}
-    - {name: "mysql", state: "installed"}
+    - {name: "mysql", state: "absent"}
 
 
 # /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
