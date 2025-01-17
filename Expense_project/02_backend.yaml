@@ -40,9 +40,24 @@
     community.general.npm:
       path: /app
 
-  - name: copu backend.service
+  - name: copy backend.service
     ansible.builtin.copy:
       src: backend.service
       dest: /etc/systemd/system/backend.service
+  
+  - name: import mysql data
+    community.mysql.mysql_db:
+      state: import 
+      name: all
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: database.sriyaandansh.fun
+      target: /app/schema/backend.sql
 
+  - name: reload and start service
+    ansible.builtin.systemd.service:
+      enable: true
+      state: restarted
+      daemon_reload: true
+      name: backend
   
