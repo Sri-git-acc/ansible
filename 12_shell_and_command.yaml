@@ -5,4 +5,4 @@
   - name: Shell testing
     ansible.builtin.shell: ls -ltr > /tmp/test1.txt
     register: shell_result
-      msg: Result is: {{shell_result}}
+      msg: "Result is: {{shell_result}}"
