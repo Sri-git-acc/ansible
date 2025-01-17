@@ -1,7 +1,13 @@
 - name: Play1
   hosts: remo
+  become: yes
   connection: local
   tasks:
+  - name: install netaddr
+    ansible.built.package:
+      name: netaddr
+      state: installed
+      
   - name: undefined variable
     ansible.builtin.debug:
       msg: "Hello {{ person | default('Steve') }}"
