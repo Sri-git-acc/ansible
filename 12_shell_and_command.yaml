@@ -2,4 +2,4 @@
   hosts: remo
   tasks:
   - name: Shell testing
-    ansible.builtin.shell: ls -ltr > /tmp/
+    ansible.builtin.shell: ls -ltr > /tmp
