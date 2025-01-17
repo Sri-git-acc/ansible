@@ -4,7 +4,7 @@
   tasks:
   - name: undefined variable
     ansible.builtin.debug:
-      msg: "Hello {{ person | default('Sri') }}"
+      msg: "Hello {{ person | default('Steve') }}"
 
   - name: string to list
     vars:
@@ -52,4 +52,10 @@
     vars:
       Name: Steve jobs
     ansible.builtin.debug:
-      msg: "Min number is: {{Name | upper}}"
+      msg: "Name in upper case: {{Name | upper}}"
+
+  - name: convert to lower
+    vars:
+      Name: Steve jobs
+    ansible.builtin.debug:
+      msg: "Name in lower case: {{Name | lower}}"
