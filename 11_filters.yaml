@@ -19,3 +19,11 @@
       - Terraform
     ansible.builtin.debug:
       msg: "Courses are:{{courses | join(', ')}}"
+  - name: map to list
+    vars:
+      courses: 
+        ci: 'jenkins'
+        IaC: 'Ansible'
+        Cloud: 'AWS'
+    ansible.builtin.debug:
+      msg: "Courses are:{{courses | dict2items}}"
