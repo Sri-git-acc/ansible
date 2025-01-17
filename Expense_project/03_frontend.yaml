@@ -35,6 +35,6 @@
       dest: /etc/nginx/default.d/expense.conf
   
   - name: restart nginx
-    ansible.built.service:
+    ansible.builtin.service:
       name: nginx
       state: restarted
