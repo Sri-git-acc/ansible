@@ -5,7 +5,7 @@
   - name: disable and enable nodejs
     ansible.builtin.service:
       name: nodejs:20
-      enabled:yes
+      enabled: yes
   - name: install nodejs
     ansible.builtin.package:
       name: nodejs
