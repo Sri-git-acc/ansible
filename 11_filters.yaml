@@ -35,3 +35,8 @@
       - { 'key': 'Cloud', 'value': 'AWS' }
     ansible.builtin.debug:
       msg: "Courses are {{courses | items2dict}}"
+
+  - name: min number
+    numbers: 1,2,5,34,54,65,7,23,41
+    ansible.builtin.debug:
+      msg: "Min number is: {{numbers | min}}"
