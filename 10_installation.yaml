@@ -1,0 +1,10 @@
+- name: Python and zip installation
+  hosts: remo
+  tasks: 
+  - name: task1
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: installed
+    loop:
+    - python
+    - zip
