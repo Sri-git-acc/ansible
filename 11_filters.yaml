@@ -10,4 +10,4 @@
     vars:
       courses: "AWS, Ansible, Terraform"
     ansible.builtin.debug:
-      msg: "Courses are:{{courses}} | split(',')"
+      msg: "Courses are:{{courses | split(',')}}"
