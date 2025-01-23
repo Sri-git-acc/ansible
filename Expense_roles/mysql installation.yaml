@@ -1,0 +1,5 @@
+- name: mySQL installation
+  hosts: database
+  become: yes
+  roles:
+  - mysql
